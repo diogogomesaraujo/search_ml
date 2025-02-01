@@ -1,0 +1,4 @@
+(executable
+ (public_name search_ml)
+ (name main)
+ (libraries search_ml_parser))
