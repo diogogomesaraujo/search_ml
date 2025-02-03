@@ -1,0 +1,7 @@
+Fuzzy Search: https://www.ibm.com/docs/en/informix-servers/12.10?topic=modifiers-fuzzy-searches
+
+Menhir Parser: https://github.com/andrejbauer/plzoo
+
+OCaml Module System: https://ocaml.org/manual/5.3/moduleexamples.html#
+
+TF-IDF: https://en.wikipedia.org/wiki/Tf%E2%80%93idf#:~:text=play%20it%20is.-,Definition,document%20or%20a%20web%20page.

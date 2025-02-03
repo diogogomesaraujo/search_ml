@@ -1,4 +1,5 @@
-(executable
- (public_name search_ml)
- (name main)
- (libraries search_ml_parser))
+ (executable
+  (public_name search)
+  (name main)
+ (libraries interpreter ppx_deriving)
+  (preprocess (pps ppx_deriving.std)))

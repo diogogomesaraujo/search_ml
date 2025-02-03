@@ -3,6 +3,6 @@
 (ocamllex lexer)
 
 (library
- (name search_ml_parser)
+ (name interpreter)
  (preprocess (pps ppx_deriving.show))
-)
+ )
