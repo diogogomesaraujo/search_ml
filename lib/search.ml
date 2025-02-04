@@ -1,10 +1,9 @@
 open Ast
 
-let specific_search (list_to_search : expr list) (expr_to_search : expr) : expr option  =
-  let l = List.filter (
-    fun expr ->
-    match compare expr expr_to_search with
+let rec contains (list_to_search : expr list) (expr_to_search : expr) : bool  =
+  match (list_to_search , expr_to_search) with
+  | ([], _) -> false
+  | (l, e) ->
+    match compare (List.hd l) e with
     | 0 -> true
-    | _ -> false
-  ) list_to_search in
-  try Some (List.hd l) with Failure _ -> None
+    | _ -> contains (List.tl l) e
