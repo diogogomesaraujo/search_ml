@@ -2,4 +2,6 @@ val a : int -> int
 
 
 val b : string -> float
-val c : a' -> a' list
+
+
+val f : string -> float
