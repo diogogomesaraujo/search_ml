@@ -1,7 +1,3 @@
-val a : int -> int
+val negative : int -> int
 
-
-val b : string -> float
-
-
-val f : string -> float
+val abs_int : int -> int
