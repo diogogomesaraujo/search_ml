@@ -4,5 +4,5 @@ type op =
 
 type expr =
   | Type of string
-  | Title of string * expr
+  | Val of string * expr
   | Op of op * expr * expr

@@ -7,7 +7,7 @@ let white = [' ' '\t']+
 rule read =
     parse
     | white { read lexbuf }
-    | "var" { VAR }
+    | "val" { VAL }
     | ":" { DIV }
     | "(" { LPAR }
     | ")" { RPAR }

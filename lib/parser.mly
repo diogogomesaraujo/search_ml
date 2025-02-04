@@ -4,7 +4,7 @@
 
 %token <string> STRING
 
-%token VAR
+%token VAL
 %token DIV
 
 %token LPAR
@@ -28,7 +28,7 @@ prog:
 expr:
   | e1 = expr; ARROW; e2 = expr { Op (Arrow, e1, e2) }
   | e1 = expr; STAR; e2 = expr { Op (Star, e1, e2) }
-  | VAR; t = STRING; DIV; e = expr { Title(t, e) }
+  | VAL; t = STRING; DIV; e = expr { Val(t, e) }
   | t = STRING { Type t }
   | LPAR; e = expr; RPAR { e }
   ;
