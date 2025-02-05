@@ -24,3 +24,22 @@ let match_types_and_operators list_to_search expr_to_search =
       end
     | (_, _) -> false
   ) list_to_search
+
+let match_types list_to_search expr_to_search =
+  let rec types_list l e =
+    match e with
+    | Type (s, None) -> l @ [s]
+    | Type (s1, Some s2) -> l @ [s1] @ [s2]
+    | Val (_, e) -> l @ (types_list l e)
+    | Op (_, e1, e2) -> l @ (types_list l e1) @ (types_list l e2)
+  in
+
+  let tl = types_list [] expr_to_search in
+
+  List.filter (
+    fun e ->
+      let l_tl = types_list [] e in
+      match compare l_tl tl with
+      | 0 -> true
+      | _ -> false
+  ) list_to_search
