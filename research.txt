@@ -1,4 +1,4 @@
-Fuzzy Search: https://www.ibm.com/docs/en/informix-servers/12.10?topic=modifiers-fuzzy-searches
+Fuzzy Search: https://medium.com/@m.nath/fuzzy-matching-algorithms-81914b1bc498
 
 Menhir Parser: https://github.com/andrejbauer/plzoo
 

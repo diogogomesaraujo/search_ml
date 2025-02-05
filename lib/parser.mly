@@ -29,6 +29,7 @@ expr:
   | e1 = expr; ARROW; e2 = expr { Op (Arrow, e1, e2) }
   | e1 = expr; STAR; e2 = expr { Op (Star, e1, e2) }
   | VAL; t = STRING; DIV; e = expr { Val(t, e) }
-  | t = STRING { Type t }
+  | t1 = STRING;{ Type (t1, None) }
+  | t1 = STRING; t2 = STRING { Type (t1, Some t2) }
   | LPAR; e = expr; RPAR { e }
   ;

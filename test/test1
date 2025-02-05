@@ -1,3 +1,5 @@
 val negative : int -> int
 
 val abs_int : int -> int
+
+val b : int -> int option
