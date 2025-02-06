@@ -12,3 +12,8 @@ let expr_to_types expr =
   | Val (_, types) -> Some types
   | Op _ -> None
   | Type _ -> None
+
+let expr_name expr =
+  match expr with
+  | Val (n, _) -> Some n
+  | _ -> None

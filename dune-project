@@ -16,8 +16,8 @@
 
 (package
  (name search_ml)
- (synopsis "Search Engine for OCaml Libs")
+ (synopsis "Search engine for OCaml modules")
  (description "")
  (depends ocaml dune)
  (tags
-  (topics "search" "engine")))
+  ("search" "engine")))

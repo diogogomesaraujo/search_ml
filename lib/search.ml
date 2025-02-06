@@ -43,3 +43,11 @@ let match_types list_to_search expr_to_search =
       | 0 -> true
       | _ -> false
   ) list_to_search
+
+let rec match_name list_to_search name_to_search =
+  match (list_to_search, name_to_search) with
+  | ([], _) -> None
+  | (h::tl, name) ->
+    match expr_name h with
+    | Some n when compare n name == 0 -> Some h
+    | _ -> match_name tl name
